@@ -1,44 +1,83 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
+    height: 70px;
     background-color: #00e27d;
-    color: #fff;
+    color: #000000;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+header h1, header h3 {
+    margin: 0; /* Supprimez la marge par défaut */
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+footer button {
+    margin-top: 10px; /* Ajoutez de la marge en haut des boutons pour les baisser */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-section {
-    padding: 20px;
+header img {
+    width: 60px; 
+    height: auto; 
+    position: absolute; 
+    left: 0; 
+    margin-top: 5px;
 }
 
 footer {
+    height: 50px;
     background-color: #00e27d;
-    color: #fff;
+    color: #000000;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+.carrés {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Hauteur des carrés */
+    margin-top: 120px; /* Marge en haut des carrés */
+}
+
+.carré {
+    width: 30%; /* Largeur relative des carrés */
+    height: 50px; /* Hauteur des carrés */
+    padding-top: 30%; /* Hauteur relative des carrés (pour obtenir des carrés) */
+    margin: 0 100px; /* Marge entre les carrés */
+}
+
+.carré-1 {
+    background-color: rgb(142, 217, 105); /* Couleur du premier carré */
+}
+
+.carré-2 {
+    background-color: rgb(142, 217, 105); /* Couleur du deuxième carré */
+}
+
+.carré-3 {
+    background-color: rgb(142, 217, 105); /* Couleur du troisième carré */
+}
+
+/* Réponse aux écrans plus petits */
+@media screen and (max-width: 768px) {
+    .carrés {
+        flex-direction: column; /* Afficher les carrés en colonne sur les petits écrans */
+        align-items: center;
+    }
+
+    .carré {
+        width: 70%; /* Largeur relative des carrés */
+        padding-top: 70%; /* Hauteur relative des carrés (pour obtenir des carrés) */
+        margin: 10px 0; /* Marge entre les carrés */
+    }
+}
+
