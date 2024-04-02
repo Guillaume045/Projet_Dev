@@ -3,6 +3,10 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url('image.png');
+    background-size: cover; /* Assurez-vous que l'image de fond couvre tout l'écran */
+    background-position: center; /* Centrez l'image de fond */
+    background-repeat: no-repeat; /* Empêchez l'image de fond de se répéter */
 }
 
 header {
@@ -22,11 +26,11 @@ footer button {
 }
 
 header img {
-    width: 60px; 
+    width: 52px; 
     height: auto; 
     position: absolute; 
-    left: 0; 
-    margin-top: 5px;
+    left: 9px; 
+    margin-top: 9px;
 }
 
 footer {
@@ -45,39 +49,89 @@ footer {
     justify-content: center;
     align-items: center;
     height: 300px; /* Hauteur des carrés */
-    margin-top: 120px; /* Marge en haut des carrés */
+    margin-top: 100px; /* Marge en haut des carrés */
 }
 
 .carré {
-    width: 30%; /* Largeur relative des carrés */
-    height: 50px; /* Hauteur des carrés */
-    padding-top: 30%; /* Hauteur relative des carrés (pour obtenir des carrés) */
-    margin: 0 100px; /* Marge entre les carrés */
-}
-
-.carré-1 {
-    background-color: rgb(142, 217, 105); /* Couleur du premier carré */
-}
-
-.carré-2 {
-    background-color: rgb(142, 217, 105); /* Couleur du deuxième carré */
-}
-
-.carré-3 {
-    background-color: rgb(142, 217, 105); /* Couleur du troisième carré */
+    width: 350px; /* Largeur fixe des carrés */
+    height: 150px; /* Hauteur fixe des carrés */
+    margin: 25px; /* Marge entre les carrés */
+    background-color: rgb(142, 217, 105); /* Couleur des carrés */
+    padding-top: 20%; /* Hauteur relative des carrés (pour obtenir des carrés) */
+    text-align: center; /* Pour centrer le texte */
+    color: white; /* Couleur du texte */
 }
 
 /* Réponse aux écrans plus petits */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 728px) {
     .carrés {
-        flex-direction: column; /* Afficher les carrés en colonne sur les petits écrans */
-        align-items: center;
+        flex-direction: column;
+        margin-top: 50px; /* Réduire la marge en haut des carrés */
+        height: auto; /* Supprimer la hauteur fixe pour laisser les carrés s'adapter dynamiquement */
+        align-items: center; /* Centrer les carrés horizontalement */
     }
 
     .carré {
-        width: 70%; /* Largeur relative des carrés */
-        padding-top: 70%; /* Hauteur relative des carrés (pour obtenir des carrés) */
-        margin: 10px 0; /* Marge entre les carrés */
+        width: 70%;
+        margin: 10px 0; /* Ajuster la marge pour les écrans plus petits */
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .carré {
+        margin: 50px; /* Ajustement pour les écrans plus grands */
+    }
+}
+
+.bouttons {
+    text-align: center; /* Centrer les boutons horizontalement */
+    margin-top: 100px; /* Marge en haut des boutons */
+}
+
+.boutton-rectangle {
+    display: inline-block; /* Afficher les boutons en tant que blocs */
+    padding: 10px 20px; /* Ajouter un rembourrage aux boutons */
+    border: none; /* Supprimer la bordure */
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Supprimer la décoration du texte */
+    display: inline-block; /* Afficher en tant que bloc */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur de souris */
+    border-radius: 5px; /* Ajouter une bordure arrondie */
+    width: 200px; /* Largeur du bouton */
+    margin: 0 25px; /* Marge entre les carrés */
+}
+
+.boutton-rectangle:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+}
+
+.boutton-rectangle img {
+    width: 20px; /* Ajuster la taille de l'image */
+    margin-right: 10px; /* Ajouter un espace entre l'image et le texte */
+}
+
+/* Styles pour les boutons sur les grands écrans */
+.boutton-rectangle {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Styles pour les boutons sur les petits écrans */
+@media screen and (max-width: 728px) {
+    .boutton-rectangle {
+        width: 70%; /* Ajuster la largeur relative */
+        margin: 10px 0; /* Ajuster la marge */
+    }
+}
