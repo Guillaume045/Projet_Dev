@@ -3,10 +3,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('image.png');
+    background-image: url('Images/myedit_ai_image_0403091932.jpg');
     background-size: cover; /* Assurez-vous que l'image de fond couvre tout l'écran */
     background-position: center; /* Centrez l'image de fond */
     background-repeat: no-repeat; /* Empêchez l'image de fond de se répéter */
+    background-attachment: fixed; /* Fixer le fond d'écran */
+
 }
 
 header {
@@ -15,15 +17,16 @@ header {
     color: #000000;
     text-align: center;
     padding: 1px;
+    position: fixed; /* Fixer le header en haut de la page */
+    width: 100%; /* Prendre toute la largeur de la fenêtre */
+    top: 0; /* Aligner le header en haut de la fenêtre */
+    z-index: 1000; /* Assurer que le header reste au-dessus du contenu */
 }
 
 header h1, header h3 {
     margin: 0; /* Supprimez la marge par défaut */
 }
 
-footer button {
-    margin-top: 10px; /* Ajoutez de la marge en haut des boutons pour les baisser */
-}
 
 header img {
     width: 52px; 
@@ -49,7 +52,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 300px; /* Hauteur des carrés */
-    margin-top: 100px; /* Marge en haut des carrés */
+    margin-top: 200px; /* Marge en haut des carrés */
 }
 
 .carré {
@@ -128,10 +131,14 @@ footer {
     width: 200px;
 }
 
-/* Styles pour les boutons sur les petits écrans */
-@media screen and (max-width: 728px) {
+/* Réponse aux écrans plus petits */
+@media screen and (max-width: 768px) {
+    .bouttons {
+        margin-top: 50px; /* Réduire la marge en haut des boutons */
+    }
+
     .boutton-rectangle {
         width: 70%; /* Ajuster la largeur relative */
-        margin: 10px 0; /* Ajuster la marge */
+        margin: 10px 0; /* Ajuster la marge pour les écrans plus petits */
     }
 }
