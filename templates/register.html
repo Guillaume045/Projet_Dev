@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de connexion - Serre Miniature</title>
-    <link rel="stylesheet" href="styles_login.css">
+    <title>Page d'inscription - Serre Miniature</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles_login.css">
 </head>
 <body>
-	<form>
-		<h1>Se connecter</h1>
+	<form action="/register" method="POST">
+        <h1>Inscription</h1>
 		<label for="email">Email:</label><br>
 		<input type="email" id="email" name="email" required><br>
 		<label for="password">Mot de passe:</label><br>
 		<input type="password" id="password" name="password" required><br>
-		<input type="submit" value="Se connecter"><br>
-		<p>Pas de compte? <a href="signup_page.html">Inscription</a></p>
+		<input type="submit" value="S'incrire"><br>
+        <p>Déjà un compte? <a href="login.html">Se connecter</a></p>
 	</form>
 </body>
 </html>
