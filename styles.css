@@ -5,25 +5,25 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #acf4b9, #239e3e);
-    background-size: 100% 100%; /* Assure que le dégradé de couleur couvre tout l'écran */
+    background: linear-gradient(195deg, #e3fbd6, #91c194); 
+    background-size: 100% 100%;
     background-attachment: fixed;
 }
 
 header {
     height: 70px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #bbeeba;
+    color: #000000; 
     text-align: center;
     padding: 1px; 
-    position: fixed; /* Fixer le header en haut de la page */
-    width: 100%; /* Prendre toute la largeur de la fenêtre */
-    top: 0; /* Aligner le header en haut de la fenêtre */
-    z-index: 1000; /* Assurer que le header reste au-dessus du contenu */
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
 header h1, header h3 {
-    margin: 0; /* Supprimez la marge par défaut */
+    margin: 0;
 }
 
 
@@ -37,7 +37,7 @@ header img {
 
 footer {
     height: 50px;
-    background-color: #ffffff;
+    background-color: #bbeeba;
     color: #000000;
     text-align: center;
     padding: 0px;
@@ -51,79 +51,88 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Hauteur des carrés */
-    margin-top: 200px; /* Marge en haut des carrés */
+    height: 300px; 
+    margin-top: 200px;
 }
 
 .carré {
-    width: 350px; /* Largeur fixe des carrés */
-    height: 150px; /* Hauteur fixe des carrés */
-    margin: 25px; /* Marge entre les carrés */
-    background-color: #ffffff; /* Couleur des carrés */
-    padding-top: 20%; /* Hauteur relative des carrés (pour obtenir des carrés) */
-    text-align: center; /* Pour centrer le texte */
-    color: black; /* Couleur du texte */
-    border-radius: 10px;
+    width: 350px;
+    height: 150px;
+    margin: 25px;
+    background-color: rgba(235, 240, 203, 0.393); 
+    padding-top: 20%;
+    text-align: center;
+    color: #000000; 
+    border-radius: 25px;
+    border: 2px solid #000000;
 }
 
-/* Réponse aux écrans plus petits */
-@media screen and (max-width: 758px) {
+@media screen and (max-width: 765px) {
     .carrés {
         flex-direction: column;
-        margin-top: 100px; /* Réduire la marge en haut des carrés */
-        height: auto; /* Supprimer la hauteur fixe pour laisser les carrés s'adapter dynamiquement */
-        align-items: center; /* Centrer les carrés horizontalement */
+        margin-top: 100px; 
+        height: auto; 
+        align-items: center; 
     }
 
     .carré {
         width: 70%;
-        margin: 10px 0; /* Ajuster la marge pour les écrans plus petits */
+        margin: 10px 0; 
     }
 }
 
 @media screen and (min-width: 1200px) {
     .carré {
-        margin: 50px; /* Ajustement pour les écrans plus grands */
+        margin: 50px; 
     }
 }
 
 .bouttons {
-    text-align: center; /* Centrer les boutons horizontalement */
-    margin-top: 100px; /* Marge en haut des boutons */
+    text-align: center; 
+    margin-top: 100px;
+    font-size: 24px; 
 }
 
-.boutton-rectangle {
-    display: inline-block; /* Afficher les boutons en tant que blocs */
-    padding: 10px 20px; /* Ajouter un rembourrage aux boutons */
-    border: none; /* Supprimer la bordure */
-    background-color: #73e494; /* Couleur de fond */
-    color: black; /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
-    text-decoration: none; /* Supprimer la décoration du texte */
-    display: inline-block; /* Afficher en tant que bloc */
-    font-size: 16px; /* Taille de la police */
-    cursor: pointer; /* Curseur de souris */
-    border-radius: 5px; /* Ajouter une bordure arrondie */
-    width: 300px; /* Largeur du bouton */
-    margin: 0 25px; /* Marge entre les carrés */
+.on-off-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: none;
+    background-color: rgba(235, 240, 203, 0.393);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    margin: 0 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 18px;
 }
 
-
-.boutton-rectangle img {
-    width: 20px; /* Ajuster la taille de l'image */
-    margin-right: 15px; /* Ajouter un espace entre l'image et le texte */
+.icon1, .icon2 {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
 }
 
+.led, .volet {
+    display: inline-block;
+    margin-right: 10px;
+}
 
-/* Réponse aux écrans plus petits */
-@media screen and (max-width: 758px) {
+@media screen and (max-width: 765px) {
     .bouttons {
-        margin-top: 5px; /* Réduire la marge en haut des boutons */
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 
-    .boutton-rectangle {
-        width: 200px; /* Ajuster la largeur relative */
-        margin: 10px 0; /* Ajuster la marge pour les écrans plus petits */
+    .on-off-button {
+        width: 100px; 
+        margin: 0 5px;
+    }
+
+    .led, .volet {
+        margin-bottom: 30px;
     }
 }
+
+
+
