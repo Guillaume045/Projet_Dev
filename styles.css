@@ -52,7 +52,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 300px; 
-    margin-top: 200px;
+    margin-top: 180px;
 }
 
 .carré {
@@ -96,15 +96,12 @@ footer {
 .on-off-button {
     display: inline-block;
     padding: 8px 15px;
-    border: none;
     background-color: rgba(235, 240, 203, 0.393);
     text-align: center;
-    text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
     width: 100px;
     margin: 0 5px;
-    transition: background-color 0.3s, border-color 0.3s;
     font-size: 18px;
 }
 
