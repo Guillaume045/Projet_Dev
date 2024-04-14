@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     margin: 0;
     padding: 0;
@@ -22,10 +20,14 @@ header {
     z-index: 1000; 
 }
 
-header h1, header h3 {
+header h1 {
     margin: 0;
 }
 
+header h3 {
+    margin: 0;
+    margin-top: 7px;
+}
 
 header img {
     width: 52px; 
@@ -33,6 +35,12 @@ header img {
     position: absolute; 
     left: 9px; 
     margin-top: 9px;
+}
+
+@media screen and (max-width: 765px) {
+    header img {
+        width: 35px;
+    }
 }
 
 footer {
@@ -45,6 +53,10 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 1000;
+}
+
+footer p {
+    line-height: 0.9;
 }
 
 .carrés {
@@ -116,6 +128,11 @@ footer {
     margin-right: 10px;
 }
 
+.button-container {
+    display: inline-block;
+    align-items: center;
+}
+
 @media screen and (max-width: 765px) {
     .bouttons {
         padding-bottom: 100px;
@@ -129,7 +146,10 @@ footer {
     .led, .volet {
         margin-bottom: 30px;
     }
+
+    .button-container {
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+    }
 }
-
-
-
