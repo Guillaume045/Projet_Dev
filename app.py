@@ -4,7 +4,7 @@ import sqlite3
 app = Flask(__name__)
 
 # Route pour la page de connexion
-@app.route('/')
+@app.route('/login')
 def login():
     return render_template('login.html')
 
