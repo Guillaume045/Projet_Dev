@@ -20,6 +20,7 @@ Pour garantir les bonne condition, notre serre comportera également des actionn
 
 ## II.Conception de serre
 La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. 
+// metre la méca
 
 ## III. Capteurs & actionneurs
 
@@ -42,6 +43,7 @@ Nous utiliserons les actionneurs suivants pour contrôler la serre connecté :
 #### Servomoteur sg90
 Un servomoteur est un type de moteur qui peut être contrôlé avec précision pour se déplacer vers une position spécifique. Nous utiliserons un servomoteur pour contrôler le système d'ouverture et de fermeture de la serre.
 ![image4](/Images/servomotor-sg90.jpg)
+Lien pour plus d'information : https://www.friendlywire.com/projects/ne555-servo-safe/SG90-datasheet.pdf
 
 #### Led
 Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant de simuler des conditions de lumière différentes pour les plantes.
@@ -90,6 +92,9 @@ Récapitulatif de tous les pins GPIO de l’ESP32:
 |39 (VN)|OUI|NON
 |EN|NON|NON
 
+// mettre la conso
+// metre le chémat de cablage
+
 ## V. Base de données & stockage de données
 Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
 
@@ -98,4 +103,8 @@ Pour visualiser les données collectées par les capteurs et contrôler les acti
 
 ## VII. Défis & solutions
 
+// mettre les probléme et les solutions
+
 ## VIII. Conclusion
+
+// faire la conclusion
