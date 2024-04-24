@@ -27,9 +27,12 @@ La conception de notre serre connectée a été pensée pour être fonctionnelle
 Nous utiliserons les capteurs suivants pour mesurer la température, l’humidité et les niveaux de lumière à l’intérieur de la serre :
 
 #### Capteur de température et d'humidité DHT11
-Le DHT11 est un capteur de température et d'humidité, 
+Le DHT11 est un capteur de température et d'humidité.
+Lien pour plus d'information : https://components101.com/sensors/dht11-temperature-sensor
 
-#### Capteur luminosité Photorésitance
+#### Capteur luminosité Photorésistance 
+Une photorésistance est un composant électronique dont la résistivité varie en fonction de la quantité de lumière incidente : plus elle est éclairée, plus sa résistivité baisse.
+Lien pour plus d'information : https://www.electricity-magnetism.org/fr/photoresistance-ldr/
 
 ### Actionneurs
 Nous utiliserons les actionneurs suivants pour contrôler la serre connecté :
@@ -87,6 +90,7 @@ Récapitulatif de tous les pins GPIO de l’ESP32:
 Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
 
 ## VI. Site Web & interface utilisateur
+Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et permet à l'utilisateur de surveiller les conditions de la serre en temps réel.
 
 ## VII. Défis & solutions
 
