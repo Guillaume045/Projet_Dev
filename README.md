@@ -42,7 +42,10 @@ Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant
 
 ## IV. Câblage & consommation d'énergie
 
+ESP32 WROOM DevKit générique:
 ![image1](/Images/doc-esp32-pinout-reference-wroom-devkit.webp)
+
+Récapitulatif de tous les pins GPIO de l’ESP32:
 
 | GPIO | INPUT | OUTPUT
 |:-:   |:-:    |:-:
