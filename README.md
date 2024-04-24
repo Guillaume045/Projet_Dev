@@ -28,10 +28,12 @@ Nous utiliserons les capteurs suivants pour mesurer la température, l’humidit
 
 #### Capteur de température et d'humidité DHT11
 Le DHT11 est un capteur de température et d'humidité.
+![image2](/Images/DHT11.jpg)
 Lien pour plus d'information : https://components101.com/sensors/dht11-temperature-sensor
 
 #### Capteur luminosité Photorésistance 
 Une photorésistance est un composant électronique dont la résistivité varie en fonction de la quantité de lumière incidente : plus elle est éclairée, plus sa résistivité baisse.
+![image3](/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp)
 Lien pour plus d'information : https://www.electricity-magnetism.org/fr/photoresistance-ldr/
 
 ### Actionneurs
@@ -39,9 +41,11 @@ Nous utiliserons les actionneurs suivants pour contrôler la serre connecté :
 
 #### Servomoteur sg90
 Un servomoteur est un type de moteur qui peut être contrôlé avec précision pour se déplacer vers une position spécifique. Nous utiliserons un servomoteur pour contrôler le système d'ouverture et de fermeture de la serre.
+![image4](/Images/servomotor-sg90.jpg)
 
 #### Led
 Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant de simuler des conditions de lumière différentes pour les plantes.
+![image2](/Images/Light-Emitting-Diode-LED.png)
 
 ## IV. Câblage & consommation d'énergie
 
