@@ -49,6 +49,36 @@ Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant
 |0|OUI (Pullup interne)|OUI
 |1 (TX0)|NON|OUI
 |2|OUI (Pulldown interne)|OUI
+|3 (RX0)|OUI|NON
+|4|OUI|OUI
+|5|OUI|OUI
+|6|NON|NON
+|7|NON|NON
+|8|NON|NON
+|9|NON|NON
+|10|NON|NON
+|11|NON|NON
+|12 (MTDI)|OUI (Pulldown interne)|OUI
+|13|OUI|OUI
+|14|OUI|OUI
+|15 (MTDO)|OUI (Pullup interne)|OUI
+|16|OUI|OUI
+|17|OUI|OUI
+|18|OUI|OUI
+|19|OUI|OUI
+|21|OUI|OUI
+|22|OUI|OUI
+|23|OUI|OUI
+|25|OUI|OUI
+|26|OUI|OUI
+|27|OUI|OUI
+|32|OUI|OUI
+|33|OUI|OUI
+|34|OUI|NON
+|35|OUI|NON
+|36 (VP)|OUI|NON
+|39 (VN)|OUI|NON
+|EN|NON|NON
 
 ## V. Base de données & stockage de données
 Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
