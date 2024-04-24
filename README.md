@@ -42,7 +42,16 @@ Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant
 
 ## IV. Câblage & consommation d'énergie
 
+![image1](/Images/doc-esp32-pinout-reference-wroom-devkit.webp)
+
+| GPIO | INPUT | OUTPUT
+|:-:   |:-:    |:-:
+|0|OUI (Pullup interne)|OUI
+|1 (TX0)|NON|OUI
+|2|OUI (Pulldown interne)|OUI
+
 ## V. Base de données & stockage de données
+Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
 
 ## VI. Site Web & interface utilisateur
 
