@@ -49,7 +49,7 @@ def read_temperature_humidity():
 # Fonction pour lire l'intensité lumineuse
 def read_light_intensity():
     light_value = light_adc.read()
-    print("Valeur de la luminosité:", light_value)
+    #print("Valeur de la luminosité:", light_value)
     return light_value
 
 # Fonction pour contrôler la LED
@@ -80,6 +80,8 @@ def turn_on_led():
 def turn_off_led():
     led.off()
 
+html_file_path = '/templates/index.html'
+
 # Fonction pour gérer les requêtes HTTP
 def http_server():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -96,11 +98,18 @@ def http_server():
         # page 
         if 'GET /index' in request:
             print("Requête pour la page home.")
-            temperature = read_temperature_humidity()
-            humidity = read_temperature_humidity()
+            temperature = dht_sensor.temperature()
+            humidity = dht_sensor.humidity()
             light_intensity = read_light_intensity()
-            with open('/templates/index.html', 'r') as f:
-                response = f.read().format(temperature, humidity, light_intensity)
+            data = {'temperature': temperature, 'humidity': humidity, 'light_intensity': light_intensity}
+            # Lisez le contenu de la page HTML
+            with open(html_file_path, 'r') as f:
+                html_content = f.read()
+            # Remplacez les balises de données dans le HTML avec les valeurs actuelles
+            html_content = html_content.replace('{temperature}', str(temperature))
+            html_content = html_content.replace('{humidity}', str(humidity))
+            html_content = html_content.replace('{light_intensity}', str(light_intensity))
+            response = html_content
         elif 'GET /login' in request:
             print("Requête pour la page login.")
             with open('/templates/login.html', 'r') as f:
@@ -170,4 +179,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
