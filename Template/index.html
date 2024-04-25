@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Serre Miniature</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
     <header>
-        <img src="Images/Compte.png" alt="Logo de compte">
         <h1>Barbara</h1>
         <h3>Projet de Serre Miniature</h3>
     </header>
@@ -17,31 +15,28 @@
         <!-- Le contenu principal de la page va ici -->
         <section class="carrés">
             <div class="carré carré-1">
-                Texte pour le carré 1
+                <h3 class="w3-padding">Température</h3>
+                <p class="w3-xxlarge"><span id="temperature">0 °C</span></p>
             </div>
             <div class="carré carré-2">
-                Texte pour le carré 2
+                <h3 class="w3-padding">Humidité</h3>
+                <p class="w3-xxlarge"><span id="humidite">0 %</span></p>
             </div>
             <div class="carré carré-3">
-                Texte pour le carré 3
+                <h3 class="w3-padding">Niveau de luminosité</h3>
+                <p class="w3-xxlarge"><span id="valeurLuminosite">0</span></p>
             </div>
-        </section>
+        </section> 
         <section class="bouttons">
             <div class="led">
-                <img src="Images/Led.png" alt="Led" class="icon1">
                 <span>Leds :</span>
-                <div class="button-container">
-                    <button class="on-off-button">On</button>
-                    <button class="on-off-button">Off</button>
-                </div>
+                <button id="led-on" class="on-off-button">On</button>
+                <button id="led-off" class="on-off-button">Off</button>
             </div>
             <div class="volet">
-                <img src="Images/Volet.png" alt="Volet" class="icon2">
                 <span>Volets :</span>
-                <div class="button-container">
-                    <button class="on-off-button">On</button>
-                    <button class="on-off-button">Off</button>
-                </div>
+                <button id="servo-on" class="on-off-button">On</button>
+                <button id="servo-off" class="on-off-button">Off</button>
             </div>
         </section>
     </main>
@@ -49,6 +44,6 @@
         <!-- Le pied de page de la page va ici -->
         <p>&copy; 2024 Serre Miniature. Tous droits réservés.</p>
     </footer>
+    <script src="../Js/script.js"></script>
 </body>
 </html>
-
