@@ -11,18 +11,27 @@ Pour garantir les bonne condition, notre serre comportera également des actionn
 ## Sommaire
 - I.Introduction
 - II. Conception de serre
-- III. Capteurs & actionneurs
-- IV. Câblage & consommation d'énergie
-- V. Base de données & stockage de données
-- VI. Site Web & interface utilisateur
-- VII. Défis & solutions
-- VIII. Conclusion
+- III. Langage utilisé
+- IV. Capteurs & actionneurs
+- V. Câblage & consommation d'énergie
+- VI. Base de données & stockage de données
+- VII. Site Web & interface utilisateur
+- VIII. Défis & solutions
+- IX. Conclusion
 
 ## II.Conception de serre
 La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. 
 // metre la méca
 
-## III. Capteurs & actionneurs
+## III. Langage utilisé
+Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel PlatFormIO car nous souhaitons découvrir le logiciel qui est une extension de VSCode, 
+![image10](/Images/platformio.svg)
+![image12](/Images/C++.png)
+mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième options qui a était de le faire en MicroPython avec Thonny le logiciel. 
+![image13](/Images/thonny.png)
+![image14](/Images/micropython.png)
+
+## IV. Capteurs & actionneurs
 
 ### Capteurs
 Nous utiliserons les capteurs suivants pour mesurer la température, l’humidité et les niveaux de lumière à l’intérieur de la serre :
@@ -49,7 +58,7 @@ Lien pour plus d'information : https://www.friendlywire.com/projects/ne555-servo
 Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant de simuler des conditions de lumière différentes pour les plantes.
 ![image2](/Images/Light-Emitting-Diode-LED.png)
 
-## IV. Câblage & consommation d'énergie
+## V. Câblage & consommation d'énergie
 
 ESP32 WROOM DevKit générique:
 ![image1](/Images/doc-esp32-pinout-reference-wroom-devkit.webp)
@@ -95,16 +104,16 @@ Récapitulatif de tous les pins GPIO de l’ESP32:
 // mettre la conso
 // metre le chémat de cablage
 
-## V. Base de données & stockage de données
+## VI. Base de données & stockage de données
 Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
 
-## VI. Site Web & interface utilisateur
+## VII. Site Web & interface utilisateur
 Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et permet à l'utilisateur de surveiller les conditions de la serre en temps réel.
 
-## VII. Défis & solutions
+## VIII. Défis & solutions
 
 // mettre les probléme et les solutions
 
-## VIII. Conclusion
+## IX. Conclusion
 
 // faire la conclusion
