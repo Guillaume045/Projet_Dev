@@ -2,11 +2,11 @@
 
 ## I.Introduction 
 
-Bienvenue dans notre projet de serre connectée ! Notre objectif est de créer un système de serre connecté pour simplifier l'utilisateur dans sont cotidier et de ne pas etre tout le temps en train de socupé de sa serre.
+Bienvenue dans notre projet de serre connectée ! Notre objectif est de créer un système de serre connecté pour simplifier l'utilisateur dans sont cotidient et de ne pas être tout le temps entrain de s'occuper de sa serre.
 
 Notre serre sera équipée de capteurs pour mesurer l'humidité, la température et la luminosité à l'intérieur de la serre. Ces données seront transmises et affichées sur un site web, nous permettant de surveiller les conditions et de procéder aux ajustements nécessaires.
 
-Pour garantir les bonne condition, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairé si besoin.
+Pour garantir les bonnes conditions, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairé si besoin.
 
 ## Sommaire
 - I.Introduction
@@ -24,10 +24,10 @@ La conception de notre serre connectée a été pensée pour être fonctionnelle
 // metre la méca
 
 ## III. Langage utilisé
-Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel PlatFormIO car nous souhaitons découvrir le logiciel qui est une extension de VSCode, 
+Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
 ![image10](/Images/platformio.svg)
 ![image12](/Images/C++.png)
-mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième options qui a était de le faire en MicroPython avec Thonny le logiciel. 
+mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
 ![image13](/Images/thonny.png)
 ![image14](/Images/micropython.png)
 
