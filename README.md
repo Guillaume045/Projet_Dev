@@ -24,7 +24,7 @@ La conception de notre serre connectée a été pensée pour être fonctionnelle
 <img src="Images/serre.png" alt="Description de l'image" width="250" height="200" />
 
 ## III. Langage utilisé
-Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
+Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, <br>
 <img src="Images/platformio.svg" alt="Description de l'image" width="200" height="200" />
 <img src="Images/C++.png" alt="Description de l'image" width="200" height="200" /> <br>
 mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
