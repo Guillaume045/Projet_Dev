@@ -21,12 +21,12 @@ Pour garantir les bonnes conditions, notre serre comportera également des actio
 
 ## II.Conception de serre
 La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. 
-// metre la méca
+![Serre](/Images/serre.png)
 
 ## III. Langage utilisé
 Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
 ![image10](/Images/platformio.svg)
-![image12](/Images/C++.png)
+![image12](/Images/C++.png) <br>
 mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
 ![image13](/Images/thonny.png)
 ![image14](/Images/micropython.png)
@@ -34,28 +34,28 @@ mais nous avons rencontré des problèmes dans la réalisation de fichier pour a
 ## IV. Capteurs & actionneurs
 
 ### Capteurs
-Nous utiliserons les capteurs suivants pour mesurer la température, l’humidité et les niveaux de lumière à l’intérieur de la serre :
+Nous utilisons les capteurs suivants pour mesurer la température, la luminosité et la teneure en humidité à l’intérieur de la serre :
 
 #### Capteur de température et d'humidité DHT11
 Le DHT11 est un capteur de température et d'humidité.
-![image2](/Images/DHT11.jpg)
+![image2](/Images/DHT11.jpg) <br>
 Lien pour plus d'information : https://components101.com/sensors/dht11-temperature-sensor
 
 #### Capteur luminosité Photorésistance 
 Une photorésistance est un composant électronique dont la résistivité varie en fonction de la quantité de lumière incidente : plus elle est éclairée, plus sa résistivité baisse.
-![image3](/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp)
+![image3](/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp) <br>
 Lien pour plus d'information : https://www.electricity-magnetism.org/fr/photoresistance-ldr/
 
 ### Actionneurs
-Nous utiliserons les actionneurs suivants pour contrôler la serre connecté :
+Nous utilisons les actionneurs suivants pour contrôler la serre connecté :
 
 #### Servomoteur sg90
-Un servomoteur est un type de moteur qui peut être contrôlé avec précision pour se déplacer vers une position spécifique. Nous utiliserons un servomoteur pour contrôler le système d'ouverture et de fermeture de la serre.
-![image4](/Images/servomotor-sg90.jpg)
+Un servomoteur, c'est un type de moteur qui peut être contrôlé avec précision pour se déplacer vers une position spécifique. Nous l'utilisons pour contrôler le système d'ouverture et de fermeture de la serre.
+![image4](/Images/servomotor-sg90.jpg) <br>
 Lien pour plus d'information : https://www.friendlywire.com/projects/ne555-servo-safe/SG90-datasheet.pdf
 
 #### Led
-Nous utiliserons des LED pour éclairer la serre si nécessaire, nous permettant de simuler des conditions de lumière différentes pour les plantes.
+Nous utilisons aussi des LED pour éclairer la serre si nécessaire, nous permettant de simuler des conditions de luminosité différentes pour les plantes.
 ![image2](/Images/Light-Emitting-Diode-LED.png)
 
 ## V. Câblage & consommation d'énergie
@@ -101,19 +101,27 @@ Récapitulatif de tous les pins GPIO de l’ESP32:
 |39 (VN)|OUI|NON
 |EN|NON|NON
 
-// mettre la conso
-// metre le chémat de cablage
+// metre le chémat de cablage ???
 
 ## VI. Base de données & stockage de données
 Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
 
 ## VII. Site Web & interface utilisateur
-Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et permet à l'utilisateur de surveiller les conditions de la serre en temps réel.
+Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et sur n'importe qu'elle plateforme (téléphone, tablette, ordinateur), permet à l'utilisateur de surveiller les conditions de la serre en temps réel.
 
 ## VIII. Défis & solutions
-
-// mettre les probléme et les solutions
+Pas de base de donnée car la carte ne le supporte pas = solution fichier .csv
+Capteur luminosité ne fonction pas en MicroPython
+Image = thonny (MicroPython) ne permet pas de mettre des images = changer de langage(C++) et faire des icones
+Communication entre le server et le client
+stockage = pas de solution ou changer de librairie
 
 ## IX. Conclusion
 
-// faire la conclusion
+Ce projet de serre connectée nous a permis de développer et renforcer certaines compétences.
+
+L'utilisation de technologies telles que le langage de programmation C++ et MicroPython, ainsi que des plates-formes comme PlatformIO et Thonny, ont permis de développer une architecture logicielle robuste et adaptable. Malgré les défis rencontrés, tels que l'absence de données avec certaines fonctionnalités ou la nécessité d'ajuster le langage de programmation en cours de route, nous avons su trouver des solutions pour surmonter ces obstacles et garantir le bon fonctionnement du système.
+
+La gestion des données a également été un aspect crucial de ce projet. En choisissant une base de données CSV pour stocker les informations collectées par les capteurs, nous avons privilégié une approche plus simple et efficace, tout en étant adaptée aux besoins de notre application.
+
+Enfin, le développement d'une interface utilisateur simple et accessible via un site web a permet aux utilisateurs de surveiller et de contrôler la serre à distance, offrant ainsi un certain niveau de commodité et de flexibilité.
