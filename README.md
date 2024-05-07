@@ -20,13 +20,13 @@ Pour garantir les bonnes conditions, notre serre comportera également des actio
 - IX. Conclusion
 
 ## II.Conception de serre
-La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. 
-![Serre](/Images/serre.png)
+La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. <br>
+<img src="Images/serre.png" alt="Description de l'image" width="250" height="200" />
 
 ## III. Langage utilisé
 Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
-![image10](/Images/platformio.svg)
-![image12](/Images/C++.png) <br>
+<img src="Images/platformio.svg" alt="Description de l'image" width="200" height="200" />
+<img src="Images/C++.png" alt="Description de l'image" width="200" height="200" /> <br>
 mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
 ![image13](/Images/thonny.png)
 ![image14](/Images/micropython.png)
