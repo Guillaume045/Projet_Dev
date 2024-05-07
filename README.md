@@ -20,13 +20,13 @@ Pour garantir les bonnes conditions, notre serre comportera également des actio
 - IX. Conclusion
 
 ## II.Conception de serre
-La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. <br>
-<img src="Images/serre.png" alt="Description de l'image" width="250" height="200" />
+La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. 
+![Serre](/Images/serre.png)
 
 ## III. Langage utilisé
-Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, <br>
-<img src="Images/platformio.svg" alt="Description de l'image" width="200" height="200" />
-<img src="Images/C++.png" alt="Description de l'image" width="200" height="200" /> <br>
+Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
+![image10](/Images/platformio.svg)
+![image12](/Images/C++.png)
 mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
 ![image13](/Images/thonny.png)
 ![image14](/Images/micropython.png)
@@ -38,12 +38,12 @@ Nous utilisons les capteurs suivants pour mesurer la température, la luminosit�
 
 #### Capteur de température et d'humidité DHT11
 Le DHT11 est un capteur de température et d'humidité.
-![image2](/Images/DHT11.jpg) <br>
+![image2](/Images/DHT11.jpg)
 Lien pour plus d'information : https://components101.com/sensors/dht11-temperature-sensor
 
 #### Capteur luminosité Photorésistance 
 Une photorésistance est un composant électronique dont la résistivité varie en fonction de la quantité de lumière incidente : plus elle est éclairée, plus sa résistivité baisse.
-![image3](/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp) <br>
+![image3](/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp)
 Lien pour plus d'information : https://www.electricity-magnetism.org/fr/photoresistance-ldr/
 
 ### Actionneurs
@@ -51,7 +51,7 @@ Nous utilisons les actionneurs suivants pour contrôler la serre connecté :
 
 #### Servomoteur sg90
 Un servomoteur, c'est un type de moteur qui peut être contrôlé avec précision pour se déplacer vers une position spécifique. Nous l'utilisons pour contrôler le système d'ouverture et de fermeture de la serre.
-![image4](/Images/servomotor-sg90.jpg) <br>
+![image4](/Images/servomotor-sg90.jpg)
 Lien pour plus d'information : https://www.friendlywire.com/projects/ne555-servo-safe/SG90-datasheet.pdf
 
 #### Led
@@ -110,11 +110,11 @@ Pour stocker les données collectées par les capteurs, nous avons choisi d'util
 Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et sur n'importe qu'elle plateforme (téléphone, tablette, ordinateur), permet à l'utilisateur de surveiller les conditions de la serre en temps réel.
 
 ## VIII. Défis & solutions
-Pas de base de donnée car la carte ne le supporte pas = solution fichier .csv
-Capteur luminosité ne fonction pas en MicroPython
-Image = thonny (MicroPython) ne permet pas de mettre des images = changer de langage(C++) et faire des icones
-Communication entre le server et le client
-stockage = pas de solution ou changer de librairie
+1. Base de données : La carte utilisée ne prend pas en charge l'utilisation de bases de données. Par conséquent, une alternative consiste à recourir à l'utilisation de fichiers au format .csv pour le stockage des données.
+2. Capteur de luminosité : Malheureusement, le capteur de luminosité ne fonctionne pas comme prévu lorsqu'il est utilisé avec MicroPython. Cette anomalie nécessite une révision de l'implémentation ou l'exploration d'autres langages de programmation comme le C++ pour obtenir un fonctionnement optimal.
+3. Affichage d'images : L'environnement de développement Thonny pour MicroPython ne prend pas en charge l'affichage d'images. Pour contourner cette limitation, nous avons créer des icônes à l'aide d'HTML, une autre solution aurait été de changer de langage pour utiliser un langage qui prend en charge l'utilisation d'image.
+4. Communication Serveur-Client : Assurer une communication fluide et fiable entre le serveur et le client est essentiel pour le bon fonctionnement de l'application. Tout problème rencontré dans ce domaine doit être résolu rapidement pour garantir une expérience utilisateur optimale.
+5. Stockage des Données : Actuellement, aucune solution de stockage ne satisfait pleinement les besoins du projet. La carte n'ayant pas assez de mémoire nous recherchons des solutions alternatives qui pourrait-être par exemple changer les librairies utilisés.
 
 ## IX. Conclusion
 
