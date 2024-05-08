@@ -24,11 +24,11 @@
         <section class="carrés">
             <div class="carré carré-1">
                 <h3 class="w3-padding">Température</h3>
-                <p class="w3-xxlarge"><span id="temperature">{temperature}°C</span></p>
+                <p class="w3-xxlarge"><span id="temperature"></span></p>
             </div>
             <div class="carré carré-2">
                 <h3 class="w3-padding">Humidité</h3>
-                <p class="w3-xxlarge"><span id="humidity">{humidity}%</span></p>
+                <p class="w3-xxlarge"><span id="humidity"></span></p>
             </div>
             <div class="carré carré-3">
                 <h3 class="w3-padding">Niveau de luminosité</h3>
@@ -64,5 +64,23 @@
         <p>&copy; 2024 Serre Miniature. Tous droits réservés.</p>
     </footer>
     <script src="../Js/script.js"></script>
+    <script>
+        // JavaScript pour mettre à jour les valeurs de température et d'humidité
+        window.onload = function () {
+            // Récupérer les balises <span> correspondantes
+            var temperatureSpan = document.getElementById("temperature");
+            var humiditySpan = document.getElementById("humidity");
+
+            // Faire une requête pour récupérer les données de température et d'humidité depuis le serveur Flask
+            fetch('/index')
+                .then(response => response.json())
+                .then(data => {
+                    // Mettre à jour les valeurs dans les balises <span>
+                    temperatureSpan.innerText = data.temperature + "°C";
+                    humiditySpan.innerText = data.humidity + "%";
+                })
+                .catch(error => console.error('Erreur lors de la récupération des données:', error));
+        }
+    </script>
 </body>
 </html>
