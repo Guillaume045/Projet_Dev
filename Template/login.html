@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de connexion - Serre Miniature</title>
-    <link rel="stylesheet" href="styles_login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}">
 </head>
 <body>
-	<form>
+	<form method="POST" action="/login">
 		<h1>Se connecter</h1>
 		<label for="email">Email:</label><br>
 		<input type="email" id="email" name="email" required><br>
 		<label for="password">Mot de passe:</label><br>
 		<input type="password" id="password" name="password" required><br>
 		<input type="submit" value="Se connecter"><br>
-		<p>Pas de compte? <a href="register.html">Inscription</a></p>
+		<p>Pas de compte? <a href="{{ url_for('register_page') }}">Inscription</a></p>
 	</form>
 </body>
 </html>
