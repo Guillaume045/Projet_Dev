@@ -21,15 +21,15 @@ Pour garantir les bonnes conditions, notre serre comportera également des actio
 
 ## II.Conception de serre
 La conception de notre serre connectée a été pensée pour être fonctionnelle et efficace. Nous avons choisi un design compact et modulaire pour faciliter l'installation et la maintenance. 
-![Serre](/Images/serre.png)
+![Serre](/Serveur/Images/serre.png)
 
 ## III. Langage utilisé
 Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
-![image10](/Images/platformio.svg)
-![image12](/Images/C++.png)
+![image10](/Serveur/Images/platformio.svg)
+![image12](/Serveur/Images/C++.png)
 mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
-![image13](/Images/thonny.png)
-![image14](/Images/micropython.png)
+![image13](/Serveur/Images/thonny.png)
+![image14](/Serveur/Images/micropython.png)
 
 ## IV. Capteurs & actionneurs
 
@@ -38,12 +38,12 @@ Nous utilisons les capteurs suivants pour mesurer la température, la luminosit�
 
 #### Capteur de température et d'humidité DHT11
 Le DHT11 est un capteur de température et d'humidité.
-![image2](/Images/DHT11.jpg)
+![image2](/Serveur/Images/DHT11.jpg)
 Lien pour plus d'information : https://components101.com/sensors/dht11-temperature-sensor
 
 #### Capteur luminosité Photorésistance 
 Une photorésistance est un composant électronique dont la résistivité varie en fonction de la quantité de lumière incidente : plus elle est éclairée, plus sa résistivité baisse.
-![image3](/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp)
+![image3](/Serveur/Images/Capteur-De-Lumiere-LDR-5-mm-Photoresistance-Best-buy-tunisie-prix-tunisie.webp)
 Lien pour plus d'information : https://www.electricity-magnetism.org/fr/photoresistance-ldr/
 
 ### Actionneurs
@@ -51,17 +51,17 @@ Nous utilisons les actionneurs suivants pour contrôler la serre connecté :
 
 #### Servomoteur sg90
 Un servomoteur, c'est un type de moteur qui peut être contrôlé avec précision pour se déplacer vers une position spécifique. Nous l'utilisons pour contrôler le système d'ouverture et de fermeture de la serre.
-![image4](/Images/servomotor-sg90.jpg)
+![image4](/Serveur/Images/servomotor-sg90.jpg)
 Lien pour plus d'information : https://www.friendlywire.com/projects/ne555-servo-safe/SG90-datasheet.pdf
 
 #### Led
 Nous utilisons aussi des LED pour éclairer la serre si nécessaire, nous permettant de simuler des conditions de luminosité différentes pour les plantes.
-![image2](/Images/Light-Emitting-Diode-LED.png)
+![image2](/Serveur/Images/Light-Emitting-Diode-LED.png)
 
 ## V. Câblage & consommation d'énergie
 
 ESP32 WROOM DevKit générique:
-![image1](/Images/doc-esp32-pinout-reference-wroom-devkit.webp)
+![image1](/Serveur/Images/doc-esp32-pinout-reference-wroom-devkit.webp)
 
 Récapitulatif de tous les pins GPIO de l’ESP32:
 
