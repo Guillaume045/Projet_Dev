@@ -1,37 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 import os
-import requests
+import pandas as pd
 
 app = Flask(__name__)
 
-# Chemin du répertoire des templates
+# Chemin du répertoire 
 template_dir = os.path.abspath('Serveur/Template')
-
-# Chemin du répertoire des fichiers statiques (CSS, JavaScript, images, etc.)
-static_dir = os.path.abspath('Styles')
+static_dir = os.path.abspath('Serveur/Styles')
 
 # Définition du répertoire des templates et des fichiers statiques
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
-
-# Adresse IP de votre ESP32
-esp32_ip = '192.168.4.1'  # Remplacez par l'adresse IP réelle de votre ESP32
-
-# Route pour la page d'accueil
-@app.route('/index')
-def home():
-    # URL du serveur HTTP sur ESP32 pour obtenir les données de température et d'humidité
-    url = 'http://' + esp32_ip + '/temperature'
-    # Effectuer la requête GET
-    response = requests.get(url)
-    # Vérifier si la requête a réussi
-    if response.status_code == 200:
-        temperature_data = response.json()  # Si la réponse est JSON
-        # Vous pouvez également utiliser response.text si les données ne sont pas au format JSON
-        return render_template('index.html', temperature=temperature_data['temperature'], humidity=temperature_data['humidity'])
-    else:
-        error_message = "Erreur lors de la récupération des données depuis l'ESP32."
-        return render_template('index.html', error=error_message)
 
 # Route pour la page de connexion
 @app.route('/login', methods=['GET', 'POST'])
@@ -84,7 +63,12 @@ def register():
 # Route pour la page de succès après connexion
 @app.route('/success')
 def success():
-    return render_template('index.html')
+    # Lire le fichier CSV
+    df = pd.read_csv('Serveur/DB/temperature.csv')
+    # Obtenir la dernière valeur de la dernière colonne
+    last_value = df.iloc[-1, -1]
+    print(last_value)
+    return render_template('index.html', temperature=last_value)
 
 if __name__ == '__main__':
     app.run(debug=True)
