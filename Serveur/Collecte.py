@@ -6,10 +6,12 @@ import os
 esp32_ip = '192.168.4.1'  # Remplacez par l'adresse IP réelle de votre ESP32
 
 url_temperature = 'http://' + esp32_ip + '/temperature'
-url_humidite = 'http://' + esp32_ip + '/humidite'
-url_luminosite = 'http://' + esp32_ip + '/lireLuminosite'
-url_led_on = 'http://' + esp32_ip + '/on'
-url_led_off = 'http://' + esp32_ip + '/off'
+url_humidite = 'http://' + esp32_ip + '/humidity'
+url_luminosite = 'http://' + esp32_ip + '/luminosite'
+url_led_on = 'http://' + esp32_ip + '/led/on'
+url_led_off = 'http://' + esp32_ip + '/led/off'
+url_servo_on = 'http://' + esp32_ip + '/servo/on'
+url_servo_off = 'http://' + esp32_ip + '/servo/off'
 
 response_temperature = requests.get(url_temperature)
 response_humidite = requests.get(url_humidite)
@@ -17,6 +19,9 @@ response_luminosite = requests.get(url_luminosite)
 response_led_on = requests.get(url_led_on)
 time.sleep(2)
 response_led_off = requests.get(url_led_off)
+response_servo_on = requests.get(url_servo_on)
+time.sleep(2)
+response_servo_off = requests.get(url_servo_off)
 
 # Fonction pour vérifier l'existence du dossier DB et le créer si nécessaire
 def creer_dossier_db():

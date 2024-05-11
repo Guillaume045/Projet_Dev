@@ -92,7 +92,6 @@ if __name__ == "__main__":
     print("----------")
     print("\n")
 
-    '''
     # Chemin vers le fichier CSV / Prévision
     csv_path_luminosite = 'Serveur/DB/luminosite.csv'
     mse_luminosite, nouvelle_prediction_luminosite = Prevision_Luminosite(csv_path_luminosite)
@@ -103,5 +102,4 @@ if __name__ == "__main__":
     print("Prediction de la valeur suivante :", nouvelle_prediction_luminosite)
     print("----------")
     print("\n")
-    '''
 
