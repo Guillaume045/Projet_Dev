@@ -26,8 +26,11 @@ def Fonction_DB_LR():
 
         cur.close()
         conn.close()
-
-        print("Le fichier de base de donnees a ete cree avec succes :", db_file)
+        # Vérification supplémentaire après la création
+        if os.path.exists('Serveur/Database/credential.db'):
+            print("Le fichier de base de donnees a ete cree avec succes :", db_file)
+        else:
+            print("Erreur : Le fichier de base de donnees n'a pas ete cree.")
 
 if __name__ == "__main__":
     Fonction_DB_LR()
