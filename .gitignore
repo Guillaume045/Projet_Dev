@@ -1,8 +1,6 @@
 #pour les test
 
-/Serveur/esp32.py
-/Serveur/test52.py
-
+/test
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
