@@ -3,21 +3,21 @@
 --- 
 
 Le Projet est coupé en deux parties, c'est pour cela que vous pourriez voir deux dossiers principaux dans le projet.
-- Une partie sur IOT de notre carte ESP32 qui vient à récupérer les valeurs. [Carte_esp32](/Carte_esp32/)
+- Une partie sur l'IOT de notre carte ESP32 qui vient récupérer les valeurs. [Carte_esp32](/Carte_esp32/)
 - Une autre partie serveur qui vient gérer la récupération des valeur et le site web. [Serveur](/Serveur/)
 
-Autre information le dossier [Database](/Serveur/Database/) est créer automatiquement, mais pour raison que vous ne possédé pas la carte d'IOT ni les capteurs nous avons préférer mettre le dossier pour vous permettre de pouvoir essais de lancé le fichier main sans problème.
+Autre information le dossier [Database](/Serveur/Database/) est créer automatiquement, mais comme vous ne possédé ni la carte d'IOT ni les capteurs, nous avons préférer mettre le dossier pour vous permettre de pouvoir lancer le fichier main sans problème.
 
 ---
 
 
 ## I.Introduction 
 
-Bienvenue dans notre projet de serre connectée ! Notre objectif est de créer un système de serre connecté pour simplifier l'utilisateur dans sont cotidient et de ne pas être tout le temps entrain de s'occuper de sa serre.
+Bienvenue dans notre projet de serre connectée ! Notre objectif est de créer un système de serre connecté pour simplifier l'utilisateur dans son quotidien et de ne pas être tout le temps en train de s'occuper de sa serre.
 
 Notre serre sera équipée de capteurs pour mesurer l'humidité, la température et la luminosité à l'intérieur de la serre. Ces données seront transmises et affichées sur un site web, nous permettant de surveiller les conditions et de procéder aux ajustements nécessaires.
 
-Pour garantir les bonnes conditions, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairé si besoin.
+Pour garantir les bonnes conditions, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairer si besoin.
 
 ## Sommaire
 - I.Introduction
@@ -38,14 +38,14 @@ La conception de notre serre connectée a été pensée pour être fonctionnelle
 Nous sommes tout d'abord partis pour faire ce projet en utilisant le logiciel [PlatformIO](https://platformio.org/) car nous souhaitons découvrir cet IDE qui est une extension présente dans VSCode, 
 ![image10](/Serveur/Images/platformio.svg)
 ![image12](/Serveur/Images/C++.png)
-mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une basse de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
+mais nous avons rencontré des problèmes dans la réalisation de fichier pour avoir une base de données donc nous nous sommes replié sur la deuxième option qui était de le faire en MicroPython avec [Thonny](https://thonny.org/). 
 ![image13](/Serveur/Images/thonny.png)
 ![image14](/Serveur/Images/micropython.png)
 
 ## IV. Capteurs & actionneurs
 
 ### Capteurs
-Nous utilisons les capteurs suivants pour mesurer la température, la luminosité et la teneure en humidité à l’intérieur de la serre :
+Nous utilisons les capteurs suivants pour mesurer la température, la luminosité et la teneur en humidité à l’intérieur de la serre :
 
 #### Capteur de température et d'humidité DHT11
 Le DHT11 est un capteur de température et d'humidité.
@@ -113,24 +113,25 @@ Récapitulatif de tous les pins GPIO de l’ESP32:
 |EN|NON|NON
 
 ## VI. Base de données & stockage de données
-Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
+Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et accessible facilement.
 
 ## VII. Site Web & interface utilisateur
-Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et sur n'importe qu'elle plateforme (téléphone, tablette, ordinateur), permet à l'utilisateur de surveiller les conditions de la serre en temps réel.
+Pour visualiser les données collectées par les capteurs et contrôler les actionneurs, nous avons créé un site web avec une interface utilisateur intuitive. Le site web est accessible depuis n'importe quel navigateur web et sur n'importe quelle plateforme (téléphone, tablette, ordinateur), pour permettre à l'utilisateur de surveiller les conditions de la serre en temps réel.
 
 ## VIII. Défis & solutions
-1. Base de données : La carte utilisée ne prend pas en charge l'utilisation de bases de données. Par conséquent, une alternative consiste à recourir à l'utilisation de fichiers au format .csv pour le stockage des données.
-2. Capteur de luminosité : Malheureusement, le capteur de luminosité ne fonctionne pas comme prévu lorsqu'il est utilisé avec MicroPython. Cette anomalie nécessite une révision de l'implémentation ou l'exploration d'autres langages de programmation comme le C++ pour obtenir un fonctionnement optimal.
-3. Affichage d'images : L'environnement de développement Thonny pour MicroPython ne prend pas en charge l'affichage d'images. Pour contourner cette limitation, nous avons créer des icônes à l'aide d'HTML, une autre solution aurait été de changer de langage pour utiliser un langage qui prend en charge l'utilisation d'image.
-4. Communication Serveur-Client : En raison de difficultés rencontrées avec la connexion à Ynov, l'établissement d'un serveur dédié s'est avéré impossible. En conséquence, nous avons entrepris de transformer le client en serveur. Toutefois, nous sommes toujours en train de résoudre ce problème en utilisant notre ordinateur personnel comme serveur de secours. Nous avons essayer avec deux cartes, cependant dû a des problèmes de communication nous avons abandonné cette idée.
-5. Stockage des Données : Actuellement, aucune solution de stockage ne satisfait pleinement les besoins du projet. La carte n'ayant pas assez de mémoire nous recherchons des solutions alternatives qui pourrait-être par exemple changer les librairies utilisés.
+
+1. Base de données : la carte utilisée ne prend pas en charge l'utilisation d'une base de données. Par conséquent, une alternative consiste à recourir à l'utilisation de fichiers au format .csv pour le stockage des données.
+2. Capteur de luminosité : malheureusement, le capteur de luminosité ne fonctionne pas comme prévu lorsqu'il est utilisé avec MicroPython. Cette anomalie nécessite une révision de l'implémentation ou l'exploration d'autres langages de programmation comme le C++ pour obtenir un fonctionnement optimal.
+3. Affichage d'images : l'environnement de développement Thonny pour MicroPython ne prend pas en charge l'affichage d'images. Pour contourner cette limitation, nous avons créer des icônes à l'aide de l'HTML, une autre solution aurait été de changer de langage pour en utiliser un qui prend en charge l'affichage des images.
+4. Communication Serveur-Client : en raison de difficultés rencontrées avec la connexion d'Ynov, l'établissement d'un serveur dédié s'est avéré impossible. En conséquence, nous avons entrepris de transformer le client en serveur. Toutefois, nous sommes toujours en train de résoudre ce problème en utilisant notre ordinateur personnel comme serveur de secours. Nous avons essayer avec deux cartes, cependant dus à des problèmes de communication nous avons abandonné cette idée.
+5. Stockage des Données : actuellement, aucune solution de stockage ne satisfait pleinement les besoins du projet. La carte n'ayant pas assez de mémoire, nous recherchons des solutions alternatives qui pourrait être par exemple de changer les librairies utilisées.
 
 ## IX. Conclusion
 
-Ce projet de serre connectée nous a permis de développer et renforcer certaines compétences.
+Ce projet de serre connectée nous a permis de développer et de renforcer certaines compétences.
 
-L'utilisation de technologies telles que le langage de programmation C++ et MicroPython, ainsi que des plates-formes comme PlatformIO et Thonny, ont permis de développer une architecture logicielle robuste et adaptable. Malgré les défis rencontrés, tels que l'absence de données avec certaines fonctionnalités ou la nécessité d'ajuster le langage de programmation en cours de route, nous avons su trouver des solutions pour surmonter ces obstacles et garantir le bon fonctionnement du système.
+L'utilisation de technologies telles que le langage de programmation C++ et MicroPython, ainsi que des plates-formes comme PlatformIO et Thonny, nous ont permis de développer une architecture logicielle robuste et adaptable. Malgré les défis rencontrés, tels que l'absence de données avec certaines fonctionnalités ou la nécessité d'ajuster le langage de programmation en cours de route, nous avons su trouver des solutions pour surmonter ces obstacles et garantir le bon fonctionnement du système.
 
-La gestion des données a également été un aspect crucial de ce projet. En choisissant une base de données CSV pour stocker les informations collectées par les capteurs, nous avons privilégié une approche plus simple et efficace, tout en étant adaptée aux besoins de notre application.
+La gestion des données a également été un aspect crucial de ce projet. En choisissant une base de données CSV pour stocker les informations collectées par les capteurs, nous avons privilégié une approche plus simple et efficace, tout en étant adaptées aux besoins de notre application.
 
 Enfin, le développement d'une interface utilisateur simple et accessible via un site web a permet aux utilisateurs de surveiller et de contrôler la serre à distance, offrant ainsi un certain niveau de commodité et de flexibilité.
