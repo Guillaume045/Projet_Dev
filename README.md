@@ -2,10 +2,11 @@
 
 --- 
 
-Le Projet est coupé en deux partie c'est pour cela que vous pourriez voir deux dossier principal dans le projet.
-- Une partie sur IOT de notre carte ESP32 qui viens a récupére les valeur. [Carte_esp32](/Carte_esp32/)
-- Une autre partie serveur qui viens géré la récupération des valeur et le site web. [Serveur](/Serveur/)
+Le Projet est coupé en deux parties, c'est pour cela que vous pourriez voir deux dossiers principaux dans le projet.
+- Une partie sur IOT de notre carte ESP32 qui vient à récupérer les valeurs. [Carte_esp32](/Carte_esp32/)
+- Une autre partie serveur qui vient gérer la récupération des valeur et le site web. [Serveur](/Serveur/)
 
+Autre information le dossier [Database](/Serveur/Database/) est créer automatiquement, mais pour raison que vous ne possédé pas la carte d'IOT ni les capteurs nous avons préférer mettre le dossier pour vous permettre de pouvoir essais de lancé le fichier main sans problème.
 ---
 
 
