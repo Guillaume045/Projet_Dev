@@ -53,28 +53,29 @@ if __name__ == "__main__":
     # Pour la température
     if response_temperature.status_code == 200:
         temperature = response_temperature.text
-        print("Température récupérée:", temperature)  # Ajout de cette ligne pour le débogage
+        print("Temperature recuperee:", temperature)
         enregistrer_donnees('temperature.csv', date, heure, temperature)
     else:
-        print("Erreur lors de la récupération de la température:", response_temperature.status_code)
+        print("Erreur lors de la recuperation de la temperature:", response_temperature.status_code)
         temperature = None
         enregistrer_donnees('temperature.csv', date, heure, temperature)
 
     # Pour l'humidité
     if response_humidite.status_code == 200:
         humidite = response_humidite.text
-        print("Humidité récupérée:", humidite)  # Ajout de cette ligne pour le débogage
+        print("Humidite recuperee:", humidite)
         enregistrer_donnees('humidite.csv', date, heure, humidite)
     else:
-        print("Erreur lors de la récupération de l'humidité:", response_humidite.status_code)
+        print("Erreur lors de la recuperation de l humidite:", response_humidite.status_code)
         humidite = None
         enregistrer_donnees('humidite.csv', date, heure, humidite)
 
     # Pour la luminosité
     if response_luminosite.status_code == 200:
         luminosite = response_luminosite.text
+        print("luminosite recuperee:", luminosite)
         enregistrer_donnees('luminosite.csv', date, heure, luminosite)
     else:
-        print("Erreur lors de la récupération de la luminosité:", response_luminosite.status_code)
+        print("Erreur lors de la recuperation de la luminosite:", response_luminosite.status_code)
         luminosite = None
         enregistrer_donnees('luminosite.csv', date, heure, humidite)

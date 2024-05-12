@@ -8,35 +8,27 @@ app = Flask(__name__)
 # Chemin du répertoire 
 template_dir = os.path.abspath('Serveur/Template')
 static_dir = os.path.abspath('Serveur/Styles')
-
-# Définition du répertoire des templates et des fichiers statiques
+# Répertoire des templates et des fichiers statiques
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
-# Route pour la page de connexion
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        
         conn = sqlite3.connect('Serveur/Database/credential.db')
         cur = conn.cursor()
-        
         cur.execute("SELECT * FROM cred WHERE Email=? AND Password=?", (email, password))
         user = cur.fetchone()
-        
         cur.close()
         conn.close()
         
-        if user:
-            # Authentification réussie, redirigez vers une page de réussite ou effectuez d'autres actions
+        if user:    # Authentification réussie
             return redirect(url_for('success'))
-        else:
+        else:       # Authentification échouée
             error = 'Identifiants incorrects'
-            # Authentification échouée, redirigez vers la page de connexion avec un message d'erreur
             return render_template('login.html', error='Identifiants incorrects')
     else:
-        # Si la méthode de requête n'est pas POST, affichez simplement la page de connexion
         return render_template('login.html')
 
 @app.route('/register')
@@ -47,28 +39,37 @@ def register_page():
 def register():
     email = request.form['email']
     password = request.form['password']
-    
     conn = sqlite3.connect('Serveur/Database/credential.db')
     cur = conn.cursor()
-    
     cur.execute("INSERT INTO cred (Email, Password) VALUES (?, ?)", (email, password))
     conn.commit()
-    
     cur.close()
     conn.close()
     
-    # Redirigez vers la page de connexion après l'inscription réussie
     return redirect(url_for('login'))
 
-# Route pour la page de succès après connexion
 @app.route('/success')
 def success():
-    # Lire le fichier CSV
-    df = pd.read_csv('Serveur/DB/temperature.csv')
+    # Lire les fichiers CSV
+    df_temperature = pd.read_csv('Serveur/DB/temperature.csv')
+    df_humidite = pd.read_csv('Serveur/DB/humidite.csv')
+    df_luminosite = pd.read_csv('Serveur/DB/luminosite.csv')
     # Obtenir la dernière valeur de la dernière colonne
-    last_value = df.iloc[-1, -1]
-    print(last_value)
-    return render_template('index.html', temperature=last_value)
+    value_temperature = df_temperature.iloc[-1, -1]
+    value_humidite = df_humidite.iloc[-1, -1]
+    value_luminosite = df_luminosite.iloc[-1, -1]
+    #print(value_temperature)
+    #print(value_humidite)
+    #print(value_luminosite)
+    return render_template('index.html', temperature=value_temperature, humidite=value_humidite, luminosite=value_luminosite)
+
+@app.route('/prevision')
+def prevision():
+    return render_template('prevision.html')
+
+@app.route('/user')
+def user():
+    return render_template('user.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
