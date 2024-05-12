@@ -101,8 +101,6 @@ Récapitulatif de tous les pins GPIO de l’ESP32:
 |39 (VN)|OUI|NON
 |EN|NON|NON
 
-// metre le chémat de cablage ???
-
 ## VI. Base de données & stockage de données
 Pour stocker les données collectées par les capteurs, nous avons choisi d'utiliser une base de données CSV. Cette solution simple et efficace nous permet de stocker les données de manière organisée et facilement accessible.
 
