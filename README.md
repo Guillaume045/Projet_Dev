@@ -2,7 +2,7 @@
 
 --- 
 
-Le Projet est coupé en deux partie c'est pour sela que vous pourrier voir deux dossier principal dans le projet.
+Le Projet est coupé en deux partie c'est pour cela que vous pourrier voir deux dossier principal dans le projet.
 - Une partie sur IOT de notre carte ESP32 qui viens a récupére les valeur.
 - Une autre partie serveur qui viens géré la récupération des valeur et le site web.
 
