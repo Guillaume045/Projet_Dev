@@ -74,7 +74,7 @@ def Prevision_Luminosite(csv_path, lag=3):
 
 if __name__ == "__main__":
     # Chemin vers le fichier CSV / Prévision
-    csv_path_temperature = 'Serveur/DB/temperature.csv'
+    csv_path_temperature = 'Serveur/Database/temperature.csv'
     mse_temperature, nouvelle_prediction_temperature = Prevision_Temperature(csv_path_temperature)
     print("\n")
     print("----------")
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     print("\n")
     
     # Chemin vers le fichier CSV / Prévision
-    csv_path_humidite = 'Serveur/DB/humidite.csv'
+    csv_path_humidite = 'Serveur/Database/humidite.csv'
     mse_humidite, nouvelle_prediction_humidite = Prevision_Humidite(csv_path_humidite)
     print("\n")
     print("----------")
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     print("\n")
 
     # Chemin vers le fichier CSV / Prévision
-    csv_path_luminosite = 'Serveur/DB/luminosite.csv'
+    csv_path_luminosite = 'Serveur/Database/luminosite.csv'
     mse_luminosite, nouvelle_prediction_luminosite = Prevision_Luminosite(csv_path_luminosite)
     print("\n")
     print("----------")

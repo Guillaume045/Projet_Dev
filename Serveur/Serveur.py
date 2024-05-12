@@ -54,9 +54,9 @@ def register():
 @app.route('/success')
 def success():
     # Lire les fichiers CSV
-    df_temperature = pd.read_csv('Serveur/DB/temperature.csv')
-    df_humidite = pd.read_csv('Serveur/DB/humidite.csv')
-    df_luminosite = pd.read_csv('Serveur/DB/luminosite.csv')
+    df_temperature = pd.read_csv('Serveur/Database/temperature.csv')
+    df_humidite = pd.read_csv('Serveur/Database/humidite.csv')
+    df_luminosite = pd.read_csv('Serveur/Database/luminosite.csv')
     # Obtenir la dernière valeur de la dernière colonne
     value_temperature = df_temperature.iloc[-1, -1]
     value_humidite = df_humidite.iloc[-1, -1]
