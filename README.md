@@ -3,8 +3,8 @@
 --- 
 
 Le Projet est coupé en deux partie c'est pour cela que vous pourriez voir deux dossier principal dans le projet.
-- Une partie sur IOT de notre carte ESP32 qui viens a récupére les valeur.
-- Une autre partie serveur qui viens géré la récupération des valeur et le site web.
+- Une partie sur IOT de notre carte ESP32 qui viens a récupére les valeur. [Carte_esp32](/Carte_esp32/)
+- Une autre partie serveur qui viens géré la récupération des valeur et le site web. [Serveur](/Serveur/)
 
 ---
 
