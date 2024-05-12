@@ -1,3 +1,6 @@
+# Avoir un main pour lavé les programme en une seul fois
+# Créer le 12/05/2024
+
 import subprocess
 import schedule
 import time

@@ -1,3 +1,6 @@
+# Code permetant de prend les valeur des fichier CSV pour tanté de créer la valeur qui suivera pour faire une prédiction 
+# Créer le 8/05/2024
+
 import pandas as pd
 from statsmodels.tsa.ar_model import AutoReg
 from sklearn.metrics import mean_squared_error

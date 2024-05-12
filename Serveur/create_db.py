@@ -1,3 +1,6 @@
+# Créer un dossier et un fichier pour stock les basse de données pour le login et le resgiter 
+# Créer le 9/04/2024
+
 import sqlite3
 import os
 

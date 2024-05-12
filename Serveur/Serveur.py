@@ -1,3 +1,6 @@
+# Code permetant de géré les page html et de relier la db au site 
+# Créer le 9/04/2024
+
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 import os

@@ -1,3 +1,6 @@
+# Code qui télécharger les librairie n'ésaisaire pour le projet
+# Créer le 12/05/2024
+
 import subprocess
 
 def installer_librairies():
