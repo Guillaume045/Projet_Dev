@@ -129,14 +129,17 @@ footer {
 
 .carré {
     width: 350px;
-    height: 150px;
+    height: 300px;
     margin: 25px;
     background-color: rgba(235, 240, 203, 0.393);
-    padding-top: 20%;
     text-align: center;
     color: #000000;
     border-radius: 25px;
     border: 2px solid #000000;
+}
+
+.valeur_centre {
+    margin-top: 25%;
 }
 
 @media screen and (max-width: 765px) {
@@ -150,6 +153,11 @@ footer {
     .carré {
         width: 70%;
         margin: 10px 0;
+        height: 171px;
+    }
+
+    .valeur_centre {
+        margin-top: 0px;
     }
 }
 

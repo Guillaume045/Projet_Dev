@@ -22,17 +22,29 @@
     <main>
         <!-- Le contenu principal de la page va ici -->
         <section class="carrés">
-            <div class="carré carré-1">
-                <h3 class="w3-padding">Température</h3>
-                <p class="w3-xxlarge"><span id="temperature">{{ temperature }}</span></p>
+            <div class="carré">
+                <div class="valeur_centre">
+                    <h3 class="w3-padding">Température</h3>
+                    <p class="w3-xxlarge"><span id="temperature">{{ temperature }}</span></p>
+                    <h3 class="w3-padding">Prédiction Température</h3>
+                    <p class="w3-xxlarge"><span id="prediction_temperature">{{ prediction_temperature }}</span></p>
+                </div>
             </div>
             <div class="carré carré-2">
-                <h3 class="w3-padding">Humidité</h3>
-                <p class="w3-xxlarge"><span id="humidite">{{ humidite }}</span></p>
+                <div class="valeur_centre">
+                    <h3 class="w3-padding">Humidité</h3>
+                    <p class="w3-xxlarge"><span id="humidite">{{ humidite }}</span></p>
+                    <h3 class="w3-padding">Prédiction Humidité</h3>
+                    <p class="w3-xxlarge"><span id="prediction_humidite">{{ prediction_humidite }}</span></p>
+                </div>
             </div>
             <div class="carré carré-3">
-                <h3 class="w3-padding">Niveau de luminosité</h3>
-                <p class="w3-xxlarge"><span id="luminosite">{{ luminosite }}</span></p>
+                <div class="valeur_centre">
+                    <h3 class="w3-padding">Niveau de luminosité</h3>
+                    <p class="w3-xxlarge"><span id="luminosite">{{ luminosite }}</span></p>
+                    <h3 class="w3-padding">Prédiction du niveau de luminosité</h3>
+                    <p class="w3-xxlarge"><span id="prediction_luminosite">{{ prediction_luminosite }}</span></p>
+                </div>
             </div>
         </section>
         <section class="bouttons">
@@ -43,8 +55,8 @@
                     <div class="rectangle_led"></div>
                 </div>
                 <span>Leds :</span>
-                <button id="led-on" class="on-off-button">On</button>
-                <button id="led-off" class="on-off-button">Off</button>
+                <button id="led-on" class="on-off-button" onclick="sendRequest('/led/on')">On</button>
+                <button id="led-off" class="on-off-button" onclick="sendRequest('/led/off')">Off</button>
             </div>
             <div class="volet">
                 <div class="rectangles">
@@ -54,8 +66,8 @@
                     <div class="rectangle_4"></div>
                 </div>
                 <span>Volets :</span>
-                <button id="servo-on" class="on-off-button">On</button>
-                <button id="servo-off" class="on-off-button">Off</button>
+                <button id="servo-on" class="on-off-button" onclick="sendRequest('/servo/on')">On</button>
+                <button id="servo-off" class="on-off-button" onclick="sendRequest('/servo/off')">Off</button>
             </div>
         </section>
     </main>
@@ -63,5 +75,13 @@
         <!-- Le pied de page de la page va ici -->
         <p>&copy; 2024 Serre Miniature. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        function sendRequest(endpoint) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "http://192.168.4.1" + endpoint, true);
+            xhttp.send();
+        }
+    </script>
 </body>
 </html>
