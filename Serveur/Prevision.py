@@ -1,9 +1,26 @@
 # Code permetant de prend les valeur des fichier CSV pour tanté de créer la valeur qui suivera pour faire une prédiction 
+# pour pouvoir lancé le code il faut au minimome 10 valeur 
 # Créer le 8/05/2024
 
 import pandas as pd
 from statsmodels.tsa.ar_model import AutoReg
 from sklearn.metrics import mean_squared_error
+import csv
+import time
+import os
+
+# Chemin du Dossier de sauvegarde
+chemin = 'Serveur/Database'
+
+# Les en-têtes des fichiers CSV
+entetes_prediction_temperature = ['Date', 'Heure', 'Temperature']
+entetes_prediction_humidite = ['Date', 'Heure', 'Humidite']
+entetes_prediction_luminosite = ['Date', 'Heure', 'Luminosite']
+
+# Récupération de la date et de l'heure actuelles
+maintenant = time.localtime()
+date_heure = time.strftime("%d-%m-%Y,%H:%M:%S", maintenant)
+date, heure = date_heure.split(',')
 
 def Prevision_Temperature(csv_path, lag=3):
     data = pd.read_csv(csv_path)
@@ -72,6 +89,33 @@ def Prevision_Luminosite(csv_path, lag=3):
     nouvelle_prediction_arrondie = round(nouvelle_prediction, 2)
     return mse, nouvelle_prediction_arrondie
 
+# Fonction pour faire une requête HTTP et enregistrer les données
+def collecter_et_enregistrer(valeur, nom_fichier, entetes):
+    creer_dossier()
+    verifier_fichier(nom_fichier, entetes)
+    enregistrer_donnees(nom_fichier, date, heure, valeur)
+
+# Fonction pour vérifier l'existence du dossier DB et le créer si nécessaire
+def creer_dossier():
+    if not os.path.exists(chemin):
+        os.makedirs(chemin)
+
+# Fonction pour vérifier et écrire les en-têtes des fichiers CSV
+def verifier_fichier(nom_fichier, entetes):
+    try:
+        with open(os.path.join(chemin, nom_fichier), 'r') as csvfile:
+            pass
+    except FileNotFoundError:
+        with open(os.path.join(chemin, nom_fichier), 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(entetes)
+
+# Fonction pour enregistrer les données dans un fichier CSV
+def enregistrer_donnees(nom_fichier, date, heure, valeur):
+    with open(os.path.join(chemin, nom_fichier), 'a', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([date, heure, valeur])
+
 if __name__ == "__main__":
     # Chemin vers le fichier CSV / Prévision
     csv_path_temperature = 'Serveur/Database/temperature.csv'
@@ -105,4 +149,8 @@ if __name__ == "__main__":
     print("Prediction de la valeur suivante :", nouvelle_prediction_luminosite)
     print("----------")
     print("\n")
+
+    collecter_et_enregistrer(nouvelle_prediction_temperature, 'prediction_temperature.csv', entetes_prediction_temperature)
+    collecter_et_enregistrer(nouvelle_prediction_humidite, 'prediction_humidite.csv', entetes_prediction_humidite)
+    collecter_et_enregistrer(nouvelle_prediction_luminosite, 'prediction_luminosite.csv', entetes_prediction_luminosite)
 

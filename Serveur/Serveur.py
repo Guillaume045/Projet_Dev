@@ -57,18 +57,17 @@ def success():
     df_temperature = pd.read_csv('Serveur/Database/temperature.csv')
     df_humidite = pd.read_csv('Serveur/Database/humidite.csv')
     df_luminosite = pd.read_csv('Serveur/Database/luminosite.csv')
+    df_prediction_temperature = pd.read_csv('Serveur/Database/prediction_temperature.csv')
+    df_prediction_humidite = pd.read_csv('Serveur/Database/prediction_humidite.csv')
+    df_prediction_luminosite = pd.read_csv('Serveur/Database/prediction_luminosite.csv')
     # Obtenir la dernière valeur de la dernière colonne
     value_temperature = df_temperature.iloc[-1, -1]
     value_humidite = df_humidite.iloc[-1, -1]
     value_luminosite = df_luminosite.iloc[-1, -1]
-    #print(value_temperature)
-    #print(value_humidite)
-    #print(value_luminosite)
-    return render_template('index.html', temperature=value_temperature, humidite=value_humidite, luminosite=value_luminosite)
-
-@app.route('/prevision')
-def prevision():
-    return render_template('prevision.html')
+    value_prediction_temperature = df_prediction_temperature.iloc[-1, -1]
+    value_prediction_humidite = df_prediction_humidite.iloc[-1, -1]
+    value_prediction_luminosite = df_prediction_luminosite.iloc[-1, -1]
+    return render_template('index.html', temperature=value_temperature, humidite=value_humidite, luminosite=value_luminosite, prediction_temperature=value_prediction_temperature, prediction_humidite=value_prediction_humidite, prediction_luminosite=value_prediction_luminosite)
 
 @app.route('/user')
 def user():
