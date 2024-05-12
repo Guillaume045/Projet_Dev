@@ -8,9 +8,13 @@ Notre serre sera équipée de capteurs pour mesurer l'humidité, la température
 
 Pour garantir les bonnes conditions, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairé si besoin.
 
+--- 
+
 Le Projet est coupé en deux partie c'est pour sela que vous pourrier voir deux dossier principal dans le projet.
 - Une partie sur IOT de notre carte ESP32 qui viens a récupére les valeur.
 - Une autre partie serveur qui viens géré la récupération des valeur et le site web.
+
+---
 
 ## Sommaire
 - I.Introduction
