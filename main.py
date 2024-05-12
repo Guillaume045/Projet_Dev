@@ -13,7 +13,7 @@ def execute_collecte():
 if __name__ == "__main__":
     commandes = [
         "python Serveur/Create_db.py",
-        #"python Serveur/Serveur.py",
+        "python Serveur/Serveur.py",
     ]
 
     for commande in commandes:
