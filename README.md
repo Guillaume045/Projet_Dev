@@ -7,6 +7,7 @@ Le Projet est coupé en deux parties, c'est pour cela que vous pourriez voir deu
 - Une autre partie serveur qui vient gérer la récupération des valeur et le site web. [Serveur](/Serveur/)
 
 Autre information le dossier [Database](/Serveur/Database/) est créer automatiquement, mais pour raison que vous ne possédé pas la carte d'IOT ni les capteurs nous avons préférer mettre le dossier pour vous permettre de pouvoir essais de lancé le fichier main sans problème.
+
 ---
 
 
