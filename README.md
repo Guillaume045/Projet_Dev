@@ -1,13 +1,5 @@
 # Projet_Dev Serre connecté
 
-## I.Introduction 
-
-Bienvenue dans notre projet de serre connectée ! Notre objectif est de créer un système de serre connecté pour simplifier l'utilisateur dans sont cotidient et de ne pas être tout le temps entrain de s'occuper de sa serre.
-
-Notre serre sera équipée de capteurs pour mesurer l'humidité, la température et la luminosité à l'intérieur de la serre. Ces données seront transmises et affichées sur un site web, nous permettant de surveiller les conditions et de procéder aux ajustements nécessaires.
-
-Pour garantir les bonnes conditions, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairé si besoin.
-
 --- 
 
 Le Projet est coupé en deux partie c'est pour sela que vous pourrier voir deux dossier principal dans le projet.
@@ -15,6 +7,15 @@ Le Projet est coupé en deux partie c'est pour sela que vous pourrier voir deux 
 - Une autre partie serveur qui viens géré la récupération des valeur et le site web.
 
 ---
+
+
+## I.Introduction 
+
+Bienvenue dans notre projet de serre connectée ! Notre objectif est de créer un système de serre connecté pour simplifier l'utilisateur dans sont cotidient et de ne pas être tout le temps entrain de s'occuper de sa serre.
+
+Notre serre sera équipée de capteurs pour mesurer l'humidité, la température et la luminosité à l'intérieur de la serre. Ces données seront transmises et affichées sur un site web, nous permettant de surveiller les conditions et de procéder aux ajustements nécessaires.
+
+Pour garantir les bonnes conditions, notre serre comportera également des actionneurs capables d'ouvrir et de fermer la serre, ainsi que des LED pour éclairé si besoin.
 
 ## Sommaire
 - I.Introduction
